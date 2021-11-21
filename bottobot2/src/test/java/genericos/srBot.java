@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class srBot {
     public static void main(String[] args) throws InterruptedException {
         String numenel = "+56994447606";
+        String numnacho = "+56953026331";
         WebDriver driver;
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -23,9 +24,13 @@ public class srBot {
         // 1.- Cargar la página
         driver.get("https://web.whatsapp.com/");
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@name='rememberMe']")).click();
+        //driver.findElement(By.xpath("//input[@name='rememberMe']")).click();
         Thread.sleep(18000);
-        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numenel,Keys.ENTER);
+        //driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numenel,Keys.ENTER);
+        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numnacho,Keys.ENTER);
+        //for (int i = 1; i < 6; i++) {
+          //  driver.findElement(By.xpath("//div[@spellcheck='true']")).sendKeys("hola, estamos probando el bot, mensaje numero: "+i,Keys.ENTER);
+        //}
         /*
         driver.findElement(By.id("field-password")).sendKeys("");
         driver.findElement(By.id("label-LOGON_SUBMIT_BUTTON_CAPTION")).click();
