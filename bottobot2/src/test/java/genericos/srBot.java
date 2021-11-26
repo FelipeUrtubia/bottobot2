@@ -16,6 +16,7 @@ public class srBot {
     public static void main(String[] args) throws InterruptedException, IOException {
         String numenel = "+56994447606";
         String numnacho = "+56953026331";
+        String numdino = "+56965860579";
         //WebDriver driver;
         ChromeDriver driver = new ChromeDriver();
         WebDriverManager.chromedriver().setup();
@@ -24,14 +25,10 @@ public class srBot {
         WebDriverWait wait=new WebDriverWait(driver, 2);
         Date d1 = new Date();
 
-
         // 1.- Cargar la página
         //driver.get("https://web.whatsapp.com/");
 
-        driver.get("https://web.whatsapp.com/");
-
-        LocalStorage local = ((WebStorage) driver).getLocalStorage();
-
+        /*LocalStorage local = ((WebStorage) driver).getLocalStorage();
         local.setItem("LMPjoB0h8lndku/TOGARFQ==", "false");
         local.setItem("aWQWhlQXnsU4WNhGp1BNjQ==", "\"1MqepytWz704wH3VU\"");
         local.setItem("/gwbYHsaiddnLSNt/86gnQ==","\"Felipe Urtubia\"");
@@ -49,10 +46,7 @@ public class srBot {
         local.setItem("WAToken1","\"pYftjfLPuOa8a00Q24Lvd3slpgHi1LfMHkAk5M711qE=\"");
         local.setItem("last-wid","\"56930344984@c.us\"");
         local.setItem("02qTE3tNw4pRgmFzWA9ILQ==","false");
-
-
-
-        driver.navigate().refresh();
+        driver.navigate().refresh();*/
 
 
 
@@ -79,12 +73,15 @@ public class srBot {
         /*Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@name='rememberMe']")).click();
         Thread.sleep(18000);
-        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numenel,Keys.ENTER);
-        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numnacho,Keys.ENTER);
+        //driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numenel,Keys.ENTER);
+        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numdino,Keys.ENTER);
         //for (int i = 1; i < 6; i++) {
           //  driver.findElement(By.xpath("//div[@spellcheck='true']")).sendKeys("hola, estamos probando el bot, mensaje numero: "+i,Keys.ENTER);
         //}
-        driver.findElement(By.xpath("//div/button[@title]")).click();*/
+        driver.findElement(By.xpath("//a[contains(text(),'https://drive.google.com/uc?export')]")).click();*/
+
+
+
 
 
 
@@ -123,17 +120,5 @@ public class srBot {
         driver.close();
         */
     }
-    public class addCookie {
-        public void main(String[] args) {
-            WebDriver driver = new ChromeDriver();
-            try {
-                driver.get("https://web.whatsapp.com\n");
 
-                // Adds the cookie into current browser context
-                driver.manage().addCookie(new Cookie("key", "value"));
-            } finally {
-                driver.quit();
-            }
-        }
-    }
 }
