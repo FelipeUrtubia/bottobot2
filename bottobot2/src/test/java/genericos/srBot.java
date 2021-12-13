@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.html5.LocalStorage;
 import org.openqa.selenium.html5.WebStorage;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 import java.io.*;
 import java.util.*;
 import org.openqa.selenium.*;
@@ -16,17 +17,16 @@ public class srBot {
     public static void main(String[] args) throws InterruptedException, IOException {
         String numenel = "+56994447606";
         String numnacho = "+56953026331";
-        String numdino = "+56965860579";
         //WebDriver driver;
         ChromeDriver driver = new ChromeDriver();
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        WebDriverWait wait=new WebDriverWait(driver, 2);
-        Date d1 = new Date();
+        WebDriverWait wait = new WebDriverWait(driver, 2);
 
         // 1.- Cargar la página
-        //driver.get("https://web.whatsapp.com/");
+        driver.get("https://web.whatsapp.com/");
+
 
         /*LocalStorage local = ((WebStorage) driver).getLocalStorage();
         local.setItem("LMPjoB0h8lndku/TOGARFQ==", "false");
@@ -70,15 +70,15 @@ public class srBot {
         driver.navigate().refresh();*/
 
         //inicio sesion manual y descarga del archivo
-        /*Thread.sleep(2000);
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@name='rememberMe']")).click();
         Thread.sleep(18000);
-        //driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numenel,Keys.ENTER);
-        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numdino,Keys.ENTER);
-        //for (int i = 1; i < 6; i++) {
-          //  driver.findElement(By.xpath("//div[@spellcheck='true']")).sendKeys("hola, estamos probando el bot, mensaje numero: "+i,Keys.ENTER);
-        //}
-        driver.findElement(By.xpath("//a[contains(text(),'https://drive.google.com/uc?export')]")).click();*/
+        driver.findElement(By.xpath("//div[@role='textbox']")).sendKeys(numnacho,Keys.ENTER);
+        for (int i = 1; i < 6; i++) {
+            driver.findElement(By.xpath("//div[@spellcheck='true']")).sendKeys("hola, estamos probando el bot, mensaje numero: "+i,Keys.ENTER);
+        }
+        driver.findElement(By.xpath("//a[contains(text(),'https://drive.google.com/uc?export')]")).click();
+        driver.findElement(By.xpath("//button[@title[last()]]")).click();
 
 
 
@@ -119,6 +119,11 @@ public class srBot {
 
         driver.close();
         */
+
+
     }
+
+
+
 
 }
