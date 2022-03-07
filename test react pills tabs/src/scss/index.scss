@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(213,213,213);
+  background: radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(6,97,204,1) 100%); 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.footer{
+  background: rgb(33, 37, 41);
+  color:white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  
+  .logos{
+    height: 80px;
+    margin: 10px;
+  }  
+  .links{
+    font-family: 'Montserrat', sans-serif;
+    a{
+      text-decoration: none;
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#206dca;
+        }
+    }
+  }
+}
+.navlogo{
+  height: 50px;
+}
+.pillsnav{
+  border-radius: 10px;
+}
+.form{
+  border-radius: 5px;
+}
+.titulo{
+  font-family: 'Montserrat', sans-serif, serif;
+}
